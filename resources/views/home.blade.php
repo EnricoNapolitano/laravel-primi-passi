@@ -9,7 +9,23 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container">
+
+        <header class="bg-warning">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h2>HELLO FOLKS</h2>
+                <nav>
+                    <ul class="d-flex p-3">
+                        @foreach($links as $link)
+                        <li class="p-3" style="list-style:none">
+                            <a href="{{ route( 'link', ['index' => $loop->index] ) }}" style="text-decoration:none; color:black">{{$link}}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
             <h1 class="text-center m-5">Hello World</h1>
             <div>
                 <h4>Libri</h4>
@@ -19,6 +35,6 @@
                     @endforeach
                 </ul>
             </div>
-        </div>
+        </main>
     </body>
     </html>
