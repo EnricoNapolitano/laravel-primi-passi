@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $books = ['La morte di Ivan Il\'Ic', 'Il mastino dei Baskerville', 'Il maialino di Natale', 'Total Recall'];
+    return view('home', compact('books'));
 });

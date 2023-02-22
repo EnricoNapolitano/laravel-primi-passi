@@ -11,6 +11,14 @@
     <body>
         <div class="container">
             <h1 class="text-center m-5">Hello World</h1>
+            <div>
+                <h4>Libri</h4>
+                <ul>
+                    @foreach($books as $book)
+                    <li>{{$book}}</li>
+                    @endforeach
+                </ul>
+            </div>
         </div>
     </body>
     </html>
